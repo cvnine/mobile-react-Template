@@ -1,0 +1,28 @@
+.index-page {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    .icon {
+        width: 22px;
+        height: 22px;
+    }
+    .home-icon {
+        background: url('../../image/home.png') center center /  21px 21px no-repeat;
+        &-select {
+            background: url('../../image/homeSelect.png') center center /  21px 21px no-repeat;
+        }
+    }
+    .course-icon {
+        background: url('../../image/course.png') center center /  21px 21px no-repeat;
+        &-select {
+            background: url('../../image/courseSelect.png') center center /  21px 21px no-repeat;
+        }
+    }
+    .my-icon {
+        background: url('../../image/my.png') center center /  21px 21px no-repeat;
+        &-select {
+            background: url('../../image/mySelect.png') center center /  21px 21px no-repeat;
+        }
+    }
+}
