@@ -1,16 +1,18 @@
 import { TabBar } from 'antd-mobile';
-import { Route, Router, Switch, Prompt } from 'react-router-dom';
+import { RouteComponentProps, withRouter } from 'react-router-dom';
 import React from 'react';
 
 import './index.scss';
 
-export class Course extends React.Component {
+class Course extends React.Component<RouteComponentProps> {
 
     render() {
         return (
             <div className="course-page">
-                <h2>课程页面</h2>
+                <div>列表</div>
             </div>
         );
     }
 }
+
+export default withRouter(Course)

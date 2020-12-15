@@ -2,10 +2,9 @@ const { override, fixBabelImports, overrideDevServer, addPostcssPlugins } = requ
 
 const addProxy = () => (configFunction) => {
     configFunction.proxy = {
-        '/api/': {
-            target: 'https://interface.test.com/',
+        '*': {
+            target: 'https://suggest.taobao.com/',
             changeOrigin: true,
-            // pathRewrite: { '^/v2ex': '/' },
         },
     };
 

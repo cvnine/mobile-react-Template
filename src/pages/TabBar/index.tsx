@@ -2,16 +2,16 @@
 import React from 'react';
 import { TabBar } from 'antd-mobile';
 import { Home, Course, My } from '../index';
+import { RouteComponentProps } from 'react-router-dom';
 import './index.scss';
 
-export class Tabs extends React.Component {
+export class Tabs extends React.Component<RouteComponentProps> {
 
     state = {
         selectedTab: 'Home',
     };
 
     click = () => {
-        /** @ts-ignore */
         this.props.history.push("/Add");
     }
 
@@ -40,7 +40,7 @@ export class Tabs extends React.Component {
                     <TabBar.Item
                         icon={<div className='icon course-icon' />}
                         selectedIcon={<div className='icon course-icon-select' />}
-                        title="课表"
+                        title="列表"
                         key="course"
                         selected={this.state.selectedTab === 'Course'}
                         onPress={() => this.setTab('Course')}
