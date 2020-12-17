@@ -24,8 +24,12 @@ class Home extends React.Component<RouteComponentProps> {
             Toast.show('商品名称不能为空!', 1.5);
             return;
         }
-        axios.get(`/sug?code=utf-8&q=${value}`).then((result: any) => {
-            this.setState({ list: result.result })
+        axios.get(`/sug?code=utf-8`, {
+            params: {
+                q: value
+            }
+        }).then((result: any) => {
+            this.setState({ list: result.result });
         });
     }
 

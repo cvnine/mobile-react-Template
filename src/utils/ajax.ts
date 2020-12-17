@@ -1,6 +1,20 @@
 import axios from 'axios';
 import { Toast } from 'antd-mobile';
 
+// 接口前缀
+const BASE_URL = '/api/v1';
+
+const instance = axios.create({
+    baseURL: `${BASE_URL}`
+});
+
+instance.interceptors.request.use((config) => ({
+    ...config,
+    params: {
+        ...(config.params || {}),
+        _: +new Date()
+    }
+}));
 
 // 添加请求拦截器
 axios.interceptors.request.use(function (config) {
