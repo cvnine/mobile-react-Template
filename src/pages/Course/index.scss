@@ -5,7 +5,7 @@
     .common {
         padding: 20px;
         @include text-overflow;
-        @include font-style(green, 20px, bold);
+        @include font-style(#717171, 20px, bold);
     }
 
     &-color {
