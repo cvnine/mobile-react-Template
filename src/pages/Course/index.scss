@@ -1,3 +1,15 @@
+@import '../../style/common.scss';
+
 .course-page {
     height: 100%;
+    .common {
+        padding: 20px;
+        @include text-overflow;
+        @include font-style(green, 20px, bold);
+    }
+
+    &-color {
+        @extend .common;
+        border: 2px solid blue;
+    }
 }

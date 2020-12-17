@@ -1,4 +1,4 @@
-import { WingBlank, List, Flex, InputItem, Button } from 'antd-mobile';
+import { WingBlank, List, Flex, InputItem, Button, Toast } from 'antd-mobile';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import axios from 'axios';
 import React from 'react';
@@ -20,6 +20,10 @@ class Home extends React.Component<RouteComponentProps> {
 
     query = () => {
         const { value } = this.state;
+        if (value === '') {
+            Toast.show('商品名称不能为空!', 1.5);
+            return;
+        }
         axios.get(`/sug?code=utf-8&q=${value}`).then((result: any) => {
             this.setState({ list: result.result })
         });

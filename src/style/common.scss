@@ -1,0 +1,16 @@
+
+/** 文字超出显示... */
+@mixin text-overflow {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+/** 字体的大小,颜色 和 weight */
+@mixin font-style($color, $size, $weight) {
+    font: {
+        size: $size;
+        weight: $weight;
+    };
+    color: $color;
+}

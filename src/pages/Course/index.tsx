@@ -9,7 +9,8 @@ class Course extends React.Component<RouteComponentProps> {
     render() {
         return (
             <div className="course-page">
-                <div>列表</div>
+                <div className='common'>这是一个很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的文字</div>
+                <div className='course-page-color'>这是测试样式继承但是颜色不一样的很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的文字</div>
             </div>
         );
     }
