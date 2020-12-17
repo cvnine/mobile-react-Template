@@ -1,4 +1,3 @@
-import { TabBar } from 'antd-mobile';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
 import React from 'react';
 
